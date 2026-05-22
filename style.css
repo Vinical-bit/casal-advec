@@ -10,10 +10,6 @@
     --texto-escuro: #2d3748;    /* Texto principal sobre o fundo claro */
     --texto-mutado: #718096;    /* Para placeholders e textos secundários */
 }
-body{
-    margin: 0;
-    padding: 0;
-}
 
 header{
     background-color: var(--fundo-escuro);
@@ -68,4 +64,13 @@ button.menu{
 button.menu:hover{
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin: 10px;
 }
