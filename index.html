@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casais Fortes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <!-- Cabeçalho header ("Home" "Inscreva - se" "Sobre nós")-->
+      <nav class="menu">
+              <div class = "logo">
+                <h1>Casais Fortes</h1>
+              </div>
+              
+                <ul class="menu"> <!-- ir para partes do site: home, depoimentos... -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <a href=""><button class="menu">Inscrição</button></a>
+                </ul>
+            </nav>
+     </header> 
+
+     <main>
+        <!-- HERO -->
+    <section id="home">
+      <h1>Um curso para casais que querem crescer juntos</h1>
+      <p>O Casais Fortes é um programa especial da nossa igreja para ajudar casais a fortalecerem seu relacionamento com amor, 
+      respeito e cumplicidade.</p>
+      <a href="#inscricao">Quero me inscrever</a>
+    </section>
+
+         <!-- SOBRE o curso -->
+          <article id = "sobre">
+            <h2>O que é Casais Fortes?</h2>
+           <p>Ao longo dos encontros vocês vão aprender ferramentas práticas para se comunicar melhor, resolver conflitos e se reconectar como parceiros de vida.</p>
+          </article>
+
+
+         <!-- Depoimentos-->
+          <section id = "depoimentos">
+            <h2></h2>
+          </section>
+
+
+         <!-- Formulário de inscrição-->
+          <section id = "inscricao">
+            <h2>Inscreva - se agora </h2>
+            <p>Escolha o curso e preencha os dados abaixo para garantir sua vaga.</p>
+
+            <!-- ESCOLHA DO CURSO -->
+            <div id="escolha-curso">
+              <button onclick="mostrarFormulario('casais')">Curso de Casais</button>
+              <button onclick="mostrarFormulario('noivos')">Curso de Noivos</button>
+            </div>
+            
+            <!--FORMULÁRIO CASAIS-->
+            <div id="form-casais">
+            <form action="#" method = "post">
+                <label for="nome1">Nome(Conjuge 1)</label>
+                <input type="text" id="nome1" name="nome1" placeholder="Digite seu nome" required>
+                <label for="num1">WhatsApp(Conjuge 1)</label>
+                <input type="tel" id="num1" name="num1" placeholder="(11) 99999-9999">
+
+                <label for="nome2">Nome(Conjuge 2)</label>
+                <input type="text" id="nome2" name="nome2" placeholder="Digite seu nome" required>
+                <label for="num2">WhatsApp(Conjuge 2)</label>
+                <input type="tel" id="num2" name="num2" placeholder="(11) 99999-9999">
+
+                <label for="email">E-mail</label>
+                <input type="email" id= "email" name ="email" placeholder="Digite seu email" required>
+
+                <label for="turma">Turma de preferência</label>
+                <select id="turma" name="turma" required>
+                    <option value="">Selecione um dia </option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sabado">Sábado</option>
+                </select>
+
+                <fieldset>
+          <legend>Tamanho de camiseta</legend>
+          <label>Conjuge 1</label>
+          <select id="camiseta1" name="camiseta1">
+            <option value="">Selecione</option>
+            <option value="PP">PP</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="XGG">XGG</option>
+          </select>
+
+          <label>Conjuge 2 </label>
+          <select id="camiseta2" name="camiseta2">
+            <option value="">Selecione</option>
+            <option value="PP">PP</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="XGG">XGG</option>
+          </select>
+        </fieldset>
+            </form>
+        </div>
+
+        <div id="form-noivos">
+        <h3>Inscrição — Curso de Noivos</h3>
+        <form action="#" method="post">
+            <label for="noivo1">Nome(Noivo 1)</label>
+                <input type="text" id="noivo1" name="noivo1" placeholder="Digite seu nome" required>
+                <label for="num1">WhatsApp(Noivo 1)</label>
+                <input type="tel" id="noivo-num1" name="noivo-num1" placeholder="(11) 99999-9999">
+
+                <label for="nome2">Nome(Noivo 2)</label>
+                <input type="text" id="noivo2" name="noivo2" placeholder="Digite seu nome" required>
+                <label for="num2">WhatsApp(Noivo 2)</label>
+                <input type="tel" id="noivo-num2" name="noivo-num2" placeholder="(11) 99999-9999">
+
+                <label for="email">E-mail</label>
+                <input type="email" id= "noivo-email" name ="noivo-email" placeholder="Digite seu email" required>
+
+                <fieldset>
+          <legend>Tamanho de camiseta</legend>
+          <label>Noivo 1</label>
+          <select id="camiseta-noivo1" name="camiseta-noivo1">
+            <option value="">Selecione</option>
+            <option value="PP">PP</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="XGG">XGG</option>
+          </select>
+
+          <label>Noivo 2 </label>
+          <select id="camiseta-noivo2" name="camiseta-noivo2">
+            <option value="">Selecione</option>
+            <option value="PP">PP</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="XGG">XGG</option>
+          </select>
+        </fieldset>
+            </form>
+        </div>
+        </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Casais Fortes; Todos os direitos reservados.</p>
+        </footer>
+    
+</body>
+</html>
+
+
+
