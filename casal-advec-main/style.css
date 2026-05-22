@@ -1,0 +1,101 @@
+:root {
+    /* Cores Principais (Identidade) */
+    --fundo-escuro: #1a1a2efa;    /* O azul-escuro predominante */
+    --destaque-ouro: #C9A96E;   /* O dourado para botões, links ativos e títulos */
+    --fundo-claro: #ffffff;     /* Branco para seções de contraste */
+    --fundo-alternativo: #f7f9fc; /* Um cinza bem claro para quebrar a monotonia */
+
+    /* Cores de Texto */
+    --texto-claro: #ffffff;     /* Texto sobre o fundo escuro */
+    --texto-escuro: #2d3748;    /* Texto principal sobre o fundo claro */
+    --texto-mutado: #718096;    /* Para placeholders e textos secundários */
+}
+
+header{
+    background-color: var(--fundo-escuro);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/* menu */
+
+div.logo {
+    color: var(--destaque-ouro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #e8d5a3;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+/*Transformar a linhas em X para fechar depois 
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); } */
+
+nav.menu{
+    background-color: var(--fundo-escuro);
+    filter: drop-shadow(1px 2px 3px);
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    gap: 10px;
+}
+ul.menu{
+    list-style: none;
+}
+nav.menu a {
+  text-decoration: none;
+  color: var(--texto-mutado);
+  transition: all 0.3s ease; /* move para cá */
+}
+
+nav.menu a:hover {
+  color: var(--destaque-ouro);
+  text-decoration: underline;
+}
+button.menu{
+    background-color: var(--destaque-ouro);
+    color: var(--texto-escuro);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 100px;
+}
+button.menu:hover{
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin: 10px;
+}
