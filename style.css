@@ -24,7 +24,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 1;
-  }
+}
 /* menu */
 
 div.logo{
@@ -69,15 +69,3 @@ button.menu:hover{
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
 }
-
-/* ── HEADER ── */
-
-/* ── HERO ── */
-
-/* ── SOBRE ── */
-
-/* ── DEPOIMENTOS ── */
-
-/* ── FORMULÁRIO ── */
-
-/* ── FOOTER ── */
