@@ -1,7 +1,8 @@
 :root {
     /* Cores Principais (Identidade) */
-    --fundo-escuro: #1a1a2efa;    /* O azul-escuro predominante */
-    --destaque-ouro: #C9A96E;   /* O dourado para botões, links ativos e títulos */
+    --fundo-escuro: #1a1a2e;    /* O azul-escuro predominante */
+    --destaque-ouro: #C9A96E; 
+    --ouro-claro: #e8c98a;  /* O dourado para botões, links ativos e títulos */
     --fundo-claro: #ffffff;     /* Branco para seções de contraste */
     --fundo-alternativo: #f7f9fc; /* Um cinza bem claro para quebrar a monotonia */
 
@@ -9,68 +10,257 @@
     --texto-claro: #ffffff;     /* Texto sobre o fundo escuro */
     --texto-escuro: #2d3748;    /* Texto principal sobre o fundo claro */
     --texto-mutado: #718096;    /* Para placeholders e textos secundários */
+    --borda-suave: rgba(201, 169, 110, 0.2);
 }
-
-header{
-    background-color: var(--fundo-escuro);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-/* menu */
-
-div.logo{
-    color: var(--destaque-ouro);
-}
-
-nav.menu{
-    background-color: var(--fundo-escuro);
-    filter: drop-shadow(1px 2px 3px);
-    width: 100%;
-    margin: 0px;
-    padding: 10px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    gap: 10;
-}
-ul.menu{
-    list-style: none;
-}
-nav.menu a{
-    text-decoration: none;
-    color: var(--texto-mutado);
-}
-nav.menu a:hover{
-    color: var(--destaque-ouro);
-    border-radius: 5px;
-    text-decoration:underline;
-    transform: translate(3px 3px);
-    transition: all 0.5s ease;
-}
-button.menu{
-    background-color: var(--destaque-ouro);
-    color: var(--texto-escuro);
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    width: 100px;
-}
-button.menu:hover{
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     margin: 0;
     padding: 0;
 }
-
 main{
     margin: 10px;
 }
+
+/*----HEADER -----*/
+header{
+    background-color: var(--fundo-escuro);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ---MENU --- */
+nav.menu{
+    width: 100%;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*---LOGO---*/
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo-icon{
+    color: var(--destaque-ouro); 
+    font-size: 11px;
+}
+
+.logo h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--destaque-ouro);
+    letter-spacing: 0.03rem;
+}
+
+/*HAMBURGUER*/
+.hamburger{
+    background:rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--borda-suave);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+.bar{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background:var(--destaque-ouro);
+    border-radius: 2px;
+    transition: all 0.3s ease;  
+}
+.hamburger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open .bar:nth-child(2) { opacity: 0; }
+.hamburger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/*--DRAWER---*/
+.drawer{
+    background: var(--fundo-escuro);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    border-bottom: 1px solid var(--borda-suave);
+}
+.drawer.open{
+    max-height: 220px;
+}
+.drawer ul{
+    list-style: none;
+    padding: 12px 0 8px;
+    margin: 0;
+}
+
+.drawer ul li a {
+    display: block;
+    padding: 10px 24px;
+    color: var(--texto-mutado);
+    text-decoration: none;
+    font-size: 1.rem;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+}
+
+.drawer ul li a:hover{
+    color:var(--destaque-ouro)
+}
+.drawer-inscricao{
+    display: block;
+    margin: 8px 20px 16px;
+    background: var(--destaque-ouro);
+    color: var(--fundo-escuro);
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.drawer-inscricao:hover{
+    background: var(--ouro-claro);
+}
+
+/*---INSCRIÇÃO---*/
+#inscricao{
+    padding: 40px 20px 56px;
+    background: var(--fundo-alternativo);
+}
+#inscricao h2{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--fundo-escuro);
+    margin-bottom: 8px;
+}
+#inscricao > p{
+    font-size: 0.88rem;
+    color: var(--fundo-escuro);
+    margin-bottom: 28px;
+}
+
+/*TABS DE CURSO*/
+#escolha-curso{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.btn-curso{
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--destaque-ouro);
+    background: transparent;
+    color: var(--destaque-ouro);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all o.25s ease;
+}
+.btn-curso.ativo,
+.btn-curso:hover{
+    background: var(--destaque-ouro);
+    color: var(--fundo-escuro);
+}
+/*OCULTO*/
+.oculto{
+    display: none;
+}
+/* FORM GROUP */
+.form-group{
+    margin-bottom: 14px;
+}
+.form-group label{
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 5px;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: var(--texto-escuro);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus{
+    border-color: var(--destaque-ouro);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+.form-group input::placeholder {
+    color:#a0aec0;
+    font-size: 0.85rem;
+}
+
+/*ESCOLHA CAMISETA*/
+fieldset{
+    border:1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+    background: #ffffff;
+    position: relative;
+}
+
+fieldset legend{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 01.rem;
+    text-transform: uppercase;
+    color: var(--texto-mutado);
+    padding: 0 6px;
+
+}
+.camiseta-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/*BOTÃO SUBMIT*/
+.btn-submit{
+    width: 100%;
+    padding: 13px;
+    background: var(--destaque-ouro);
+    color: var(--fundo-escuro);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-submit:hover{
+    background: var(--ouro-claro);
+    transform: translateY(-1px);
+}
+

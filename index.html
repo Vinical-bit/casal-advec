@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casais Fortes</title>
+    <title>Inscrições- Casais Fortes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type = "img" href="img/favicon.ico">
 </head>
 <body>
     <header>
@@ -13,15 +15,21 @@
               <div class = "logo">
                 <h1>Casais Fortes</h1>
               </div>
-              
-                <ul class="menu"> <!-- ir para partes do site: home, depoimentos... -->
+              <button class = "hamburger" id="hamburger" aria-label="Abrir menu">
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+              </button>
+               </nav>
+              <div class = "drawer" id= "drawer">
+                <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre nós</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
-                    <a href=""><button class="menu">Inscrição</button></a>
                 </ul>
-            </nav>
-     </header> 
+                <a href="#inscricao" class="drawer-inscricao">Inscrição</a>
+                </div>
+    </header> 
 
      <main>
         <!-- HERO -->
@@ -45,111 +53,138 @@
           </section>
 
 
-         <!-- Formulário de inscrição-->
+          <!-- Formulário de inscrição-->
           <section id = "inscricao">
-            <h2>Inscreva - se agora </h2>
+            <h2>Inscreva-se aqui </h2>
             <p>Escolha o curso e preencha os dados abaixo para garantir sua vaga.</p>
 
             <!-- ESCOLHA DO CURSO -->
             <div id="escolha-curso">
-              <button onclick="mostrarFormulario('casais')">Curso de Casais</button>
-              <button onclick="mostrarFormulario('noivos')">Curso de Noivos</button>
+              <button class="btn-curso ativo" onclick="mostrarFormulario('casais', this)">Curso de Casais</button>
+              <button class ="btn-curso" onclick="mostrarFormulario('noivos',this)">Curso de Noivos</button>
             </div>
             
             <!--FORMULÁRIO CASAIS-->
-            <div id="form-casais">
+            <div id="form-casais" class="formulario">
             <form action="#" method = "post">
-                <label for="nome1">Nome(Conjuge 1)</label>
+             <div class="form-group">
+                <label for="nome1">Nome — Cônjuge 1</label>
                 <input type="text" id="nome1" name="nome1" placeholder="Digite seu nome" required>
-                <label for="num1">WhatsApp(Conjuge 1)</label>
+            </div>
+            <div class="form-group">
+                <label for="num1">WhatsApp — Cônjuge 1</label>
                 <input type="tel" id="num1" name="num1" placeholder="(11) 99999-9999">
-
-                <label for="nome2">Nome(Conjuge 2)</label>
+            </div>
+            <div class="form-group">
+                <label for="nome2">Nome — Cônjuge 2</label>
                 <input type="text" id="nome2" name="nome2" placeholder="Digite seu nome" required>
-                <label for="num2">WhatsApp(Conjuge 2)</label>
+            </div>
+            <div class="form-group">
+                <label for="num2">WhatsApp — Cônjuge 2</label>
                 <input type="tel" id="num2" name="num2" placeholder="(11) 99999-9999">
-
+            </div>
+            <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" id= "email" name ="email" placeholder="Digite seu email" required>
-
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+             <div class="form-group">
                 <label for="turma">Turma de preferência</label>
                 <select id="turma" name="turma" required>
-                    <option value="">Selecione um dia </option>
+                    <option value="">Selecione um dia</option>
                     <option value="terca">Terça-feira</option>
                     <option value="quinta">Quinta-feira</option>
                     <option value="sabado">Sábado</option>
                 </select>
-
-                <fieldset>
+            </div>
+        <fieldset>
           <legend>Tamanho de camiseta</legend>
-          <label>Conjuge 1</label>
-          <select id="camiseta1" name="camiseta1">
-            <option value="">Selecione</option>
-            <option value="PP">PP</option>
-            <option value="P">P</option>
-            <option value="M">M</option>
-            <option value="G">G</option>
-            <option value="GG">GG</option>
-            <option value="XGG">XGG</option>
-          </select>
-
-          <label>Conjuge 2 </label>
-          <select id="camiseta2" name="camiseta2">
-            <option value="">Selecione</option>
-            <option value="PP">PP</option>
-            <option value="P">P</option>
-            <option value="M">M</option>
-            <option value="G">G</option>
-            <option value="GG">GG</option>
-            <option value="XGG">XGG</option>
-          </select>
+          <div class="camiseta-row">
+                <div class="form-group">
+                    <label for="camiseta1">Cônjuge 1</label>
+                      <select id="camiseta1" name="camiseta1">
+                          <option value="">Selecione</option>
+                          <option value="PP">PP</option>
+                          <option value="P">P</option>
+                          <option value="M">M</option>
+                          <option value="G">G</option>
+                          <option value="GG">GG</option>
+                          <option value="XGG">XGG</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="camiseta2">Cônjuge 2</label>
+                        <select id="camiseta2" name="camiseta2">
+                          <option value="">Selecione</option>
+                          <option value="PP">PP</option>
+                          <option value="P">P</option>
+                          <option value="M">M</option>
+                          <option value="G">G</option>
+                          <option value="GG">GG</option>
+                          <option value="XGG">XGG</option>
+                      </select>
+                   </div>
+                </div>
         </fieldset>
-            </form>
-        </div>
+        <button type="submit" class="btn-submit">Confirmar inscrição</button> 
+      </form>
+    </div>
 
-        <div id="form-noivos">
-        <h3>Inscrição — Curso de Noivos</h3>
+      <!--FORMULÁRIO NOIVO-->
+      <div id="form-noivos" class="formulario oculto">
         <form action="#" method="post">
-            <label for="noivo1">Nome(Noivo 1)</label>
+            <div class="form-group">
+                <label for="noivo1">Nome — Noivo(a) 1</label>
                 <input type="text" id="noivo1" name="noivo1" placeholder="Digite seu nome" required>
-                <label for="num1">WhatsApp(Noivo 1)</label>
+            </div>
+            <div class="form-group">
+                <label for="noivo-num1">WhatsApp — Noivo(a) 1</label>
                 <input type="tel" id="noivo-num1" name="noivo-num1" placeholder="(11) 99999-9999">
-
-                <label for="nome2">Nome(Noivo 2)</label>
+            </div>
+            <div class="form-group">
+                <label for="noivo2">Nome — Noivo(a) 2</label>
                 <input type="text" id="noivo2" name="noivo2" placeholder="Digite seu nome" required>
-                <label for="num2">WhatsApp(Noivo 2)</label>
+            </div>
+            <div class="form-group">
+                <label for="noivo-num2">WhatsApp — Noivo(a) 2</label>
                 <input type="tel" id="noivo-num2" name="noivo-num2" placeholder="(11) 99999-9999">
-
-                <label for="email">E-mail</label>
-                <input type="email" id= "noivo-email" name ="noivo-email" placeholder="Digite seu email" required>
-
-                <fieldset>
-          <legend>Tamanho de camiseta</legend>
-          <label>Noivo 1</label>
-          <select id="camiseta-noivo1" name="camiseta-noivo1">
-            <option value="">Selecione</option>
-            <option value="PP">PP</option>
-            <option value="P">P</option>
-            <option value="M">M</option>
-            <option value="G">G</option>
-            <option value="GG">GG</option>
-            <option value="XGG">XGG</option>
-          </select>
-
-          <label>Noivo 2 </label>
-          <select id="camiseta-noivo2" name="camiseta-noivo2">
-            <option value="">Selecione</option>
-            <option value="PP">PP</option>
-            <option value="P">P</option>
-            <option value="M">M</option>
-            <option value="G">G</option>
-            <option value="GG">GG</option>
-            <option value="XGG">XGG</option>
-          </select>
-        </fieldset>
-            </form>
-        </div>
-        </section>
+            </div>
+            <div class="form-group">
+                <label for="noivo-email">E-mail</label>
+                <input type="email" id="noivo-email" name="noivo-email" placeholder="Digite seu e-mail" required>
+            </div>
+            <fieldset>
+                <legend>Tamanho de camiseta</legend>
+                <div class="camiseta-row">
+                    <div class="form-group">
+                        <label for="camiseta-noivo1">Noivo(a) 1</label>
+                        <select id="camiseta-noivo1" name="camiseta-noivo1">
+                            <option value="">Selecione</option>
+                            <option value="PP">PP</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XGG">XGG</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="camiseta-noivo2">Noivo(a) 2</label>
+                        <select id="camiseta-noivo2" name="camiseta-noivo2">
+                            <option value="">Selecione</option>
+                            <option value="PP">PP</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XGG">XGG</option>
+                        </select>
+                    </div>
+                </div>
+          </fieldset>
+            <button type="submit" class="btn-submit">Confirmar inscrição</button>
+        </form>
+    </div>
+</section>
         </main>
         <footer>
             <p>&copy; 2025 Casais Fortes; Todos os direitos reservados.</p>
