@@ -1,14 +1,5 @@
 
-
-const hamburger = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    drawer.classList.toggle('open');
-});
-
-
+ 
 function mostrarFormulario(tipo,botao){
     document.getElementById('form-casais').classList.add('oculto');
     document.getElementById('form-noivos').classList.add('oculto');
@@ -18,3 +9,19 @@ function mostrarFormulario(tipo,botao){
     document.getElementById('form-' + tipo).classList.remove('oculto');
     botao.classList.add('ativo');
 }
+
+
+const areas = document.querySelectorAll('.area');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('visivel');
+            }, i * 120);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 });
+
+areas.forEach(area => observer.observe(area));

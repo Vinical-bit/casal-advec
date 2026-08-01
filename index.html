@@ -6,50 +6,86 @@
     <title>Inscrições- Casais Fortes</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <link rel="icon" type = "img" href="img/favicon.ico">
+    <link rel="icon" type = "image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-      <!-- Cabeçalho header ("Home" "Inscreva - se" "Sobre nós")-->
-      <nav class="menu">
-              <div class = "logo">
-                <h1>Casais Fortes</h1>
-              </div>
-              <button class = "hamburger" id="hamburger" aria-label="Abrir menu">
-                <span class = "bar"></span>
-                <span class = "bar"></span>
-                <span class = "bar"></span>
-              </button>
-               </nav>
-              <div class = "drawer" id= "drawer">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre nós</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                </ul>
-                <a href="#inscricao" class="drawer-inscricao">Inscrição</a>
-                </div>
-    </header> 
+  <nav class="menu">
+        <div class="logo">
+          <p class = "logo-texto">Casais Fortes</p>
+        </div>
+        <div class="menu-acoes">
+          <a href="https://instagram.com/familiaadvec_sp" target="_blank" rel="noopener" class="icone-instagram" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#inscricao" class="btn-header">Inscrição</a>
+        </div>
+         </nav>
+</header>
 
      <main>
         <!-- HERO -->
-    <section id="home">
-      <h1>Um curso para casais que querem crescer juntos</h1>
-      <p>O Casais Fortes é um programa especial da nossa igreja para ajudar casais a fortalecerem seu relacionamento com amor, 
-      respeito e cumplicidade.</p>
-      <a href="#inscricao">Quero me inscrever</a>
-    </section>
-
+    <section id="home" class="hero">
+  <span class="hero-eyebrow">Um programa da nossa igreja</span>
+  <div class="hero-imagem-wrap">
+    <img src="img/logohome-cortado.png" alt="Casais Fortes — um curso para casais que querem crescer juntos" class="hero-logo">
+  </div>
+  <div class="hero-conteudo">
+    <p class="hero-texto">Um curso para casais decididos a lutar pelo próprio casamento — com verdade, ferramentas práticas e a Palavra de Deus como base.</p>
+    <a href="#inscricao" class="btn-hero">Quero me inscrever</a>
+  </div>
+</section>
          <!-- SOBRE o curso -->
-          <article id = "sobre">
+          <article id = "sobre" class="sobre">
             <h2>O que é Casais Fortes?</h2>
+           <p>O Casais Fortes é um programa especial da nossa igreja para ajudar casais a fortalecerem seu relacionamento com amor, 
+            respeito e cumplicidade.</p>
            <p>Ao longo dos encontros vocês vão aprender ferramentas práticas para se comunicar melhor, resolver conflitos e se reconectar como parceiros de vida.</p>
-          </article>
-
+        <h3 class ="areas-titulo">Quatro áreas para reconstruir juntos</h3>
+     <div class="areas">
+     <div class="area">
+    <img src="img/favicon.ico" alt="" class="area-icone">
+    <h4>Comunicação</h4>
+    <p>Ferramentas práticas para conversar sobre o que dói, sem virar briga.</p>
+</div>
+<div class="area">
+    <img src="img/favicon.ico" alt="" class="area-icone">
+    <h4>Intimidade</h4>
+    <p>Redescobrir a amizade e o desejo dentro do casamento.</p>
+</div>
+<div class="area">
+    <img src="img/favicon.ico" alt="" class="area-icone">
+    <h4>Perdão</h4>
+    <p>Encerrar mágoas antigas e recomeçar com o coração leve.</p>
+</div>
+<div class="area">
+    <img src="img/favicon.ico" alt="" class="area-icone">
+    <h4>Propósito</h4>
+    <p>Entender para que Deus uniu vocês — e pra onde estão indo juntos.</p>
+</div>
+</div>
+</article>
 
          <!-- Depoimentos-->
-          <section id = "depoimentos">
-            <h2></h2>
+          <section id = "depoimentos" class= "depoimentos">
+            <span class="section-eyebrow">Quem já passou pelo curso</span>
+            <h2>Depoimentos</h2>
+
+            <div class="depoimento-card">
+              <p class="depoimento-texto">"Chegamos cansados e saímos nos escutando de um jeito que não fazíamos há anos."</p>
+              <p class="depoimento-autor">— Casal exemplo, Turma de Terça</p>
+            </div>
+            <div class="depoimento-card">
+              <p class="depoimento-texto">"O curso nos deu ferramentas simples que usamos até hoje em casa."</p>
+              <p class="depoimento-autor">— Casal exemplo, Turma de Sábado</p>
+            </div>
           </section>
 
 
