@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrições- Casais Fortes</title>
+    <title>Casais Fortes • Ministério Famílias Vitoriosas </title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="icon" type = "image/x-icon" href="img/favicon.ico">
@@ -15,7 +15,7 @@
     <header>
   <nav class="menu">
         <div class="logo">
-          <p class = "logo-texto">Casais Fortes</p>
+          <p class = "logo-texto">Casais Fortes • Advec SP</p>
         </div>
         <div class="menu-acoes">
           <a href="https://instagram.com/familiaadvec_sp" target="_blank" rel="noopener" class="icone-instagram" aria-label="Instagram">
@@ -33,7 +33,6 @@
      <main>
         <!-- HERO -->
     <section id="home" class="hero">
-  <span class="hero-eyebrow">Um programa da nossa igreja</span>
   <div class="hero-imagem-wrap">
     <img src="img/logohome-cortado.png" alt="Casais Fortes — um curso para casais que querem crescer juntos" class="hero-logo">
   </div>
@@ -73,20 +72,96 @@
 </div>
 </article>
 
-         <!-- Depoimentos-->
-          <section id = "depoimentos" class= "depoimentos">
-            <span class="section-eyebrow">Quem já passou pelo curso</span>
-            <h2>Depoimentos</h2>
+<!-- Para quem é -->
+<section id="para-quem" class="para-quem">
+  <span class="section-eyebrow">Para quem é</span>
+  <h2>Casais Fortes é para casais casados.</h2>
+  <p class="para-quem-texto">Recém-casados, casais de longa data, casais em crise ou casais que só querem investir na própria aliança — o curso encontra vocês onde estiverem.</p>
 
-            <div class="depoimento-card">
-              <p class="depoimento-texto">"Chegamos cansados e saímos nos escutando de um jeito que não fazíamos há anos."</p>
-              <p class="depoimento-autor">— Casal exemplo, Turma de Terça</p>
-            </div>
-            <div class="depoimento-card">
-              <p class="depoimento-texto">"O curso nos deu ferramentas simples que usamos até hoje em casa."</p>
-              <p class="depoimento-autor">— Casal exemplo, Turma de Sábado</p>
-            </div>
-          </section>
+  <div class="noivos-callout">
+    <p class="noivos-eyebrow">Ainda não casaram?</p>
+    <p class="noivos-titulo">Curso de Noivos</p>
+    <p class="noivos-texto">Turma própria, pensada para quem está se preparando para o casamento — antes do "sim". Sábados, às 17h.</p>
+    <a href="#inscricao" class="noivos-link" onclick="irParaNoivos()">Inscrever-se no curso de noivos →</a>
+  </div>
+</section>
+
+         <!-- Depoimentos-->
+<section id="depoimentos" class="depoimentos">
+  <span class="section-eyebrow">Quem já passou pelo curso</span>
+  <h2>Depoimentos</h2>
+
+  <div class="depoimentos-carrossel">
+    <div class="depoimentos-track" id="depoimentos-track">
+
+      <div class="depoimentos-pagina">
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"Chegamos quase desistindo. Saímos do curso decididos a recomeçar."</p>
+          <p class="depoimento-autor">— Casal exemplo, Turma de Terça</p>
+        </div>
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"O curso nos deu ferramentas simples que usamos até hoje em casa."</p>
+          <p class="depoimento-autor">— Casal exemplo, Turma de Sábado</p>
+        </div>
+      </div>
+
+      <div class="depoimentos-pagina">
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"Aprendemos a brigar sem machucar um ao outro. Parece pouco, mas mudou tudo em casa."</p>
+          <p class="depoimento-autor">— Casal exemplo, Turma de Quinta</p>
+        </div>
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"Não é teoria. São ferramentas que usamos até hoje, toda semana."</p>
+          <p class="depoimento-autor">— Casal exemplo, Turma de Terça</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="depoimentos-dots" id="depoimentos-dots">
+      <span class="dot ativo"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+<!-- O que vocês precisam saber -->
+<section id="informacoes" class="informacoes">
+  <h2>O que vocês precisam saber</h2>
+
+  <div class="info-grid">
+
+    <div class="info-item">
+      <p class="info-titulo">Turmas disponíveis</p>
+      <p class="info-texto">São 3 turmas semanais — escolham o dia que funciona melhor pra vocês.</p>
+      <div class="info-pills">
+        <span class="info-pill">Terça · 20h</span>
+        <span class="info-pill">Quinta · 20h</span>
+        <span class="info-pill">Sábado · 9h30</span>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <p class="info-titulo">Onde</p>
+      <p class="info-texto">ADVEC São Paulo — Rua dos Trilhos, 260, Mooca, São Paulo - SP</p>
+    </div>
+
+    <div class="info-item">
+      <p class="info-titulo">Para quem</p>
+      <p class="info-texto">Casais casados, de qualquer idade ou tempo de união.</p>
+    </div>
+
+    <div class="info-item">
+      <p class="info-titulo">Investimento</p>
+      <p class="info-texto">R$ 180 — Inclui material do curso (livro + camiseta do casal).</p>
+    </div>
+
+    <div class="info-item">
+      <p class="info-titulo">Inscrições</p>
+      <p class="info-texto">Pelo formulário oficial.</p>
+    </div>
+
+  </div>
+</section>
 
 
           <!-- Formulário de inscrição-->
@@ -104,19 +179,27 @@
             <div id="form-casais" class="formulario">
             <form action="#" method = "post">
              <div class="form-group">
-                <label for="nome1">Nome — Cônjuge 1</label>
+                <label for="nome1">Nome — Esposo</label>
                 <input type="text" id="nome1" name="nome1" placeholder="Digite seu nome" required>
             </div>
             <div class="form-group">
-                <label for="num1">WhatsApp — Cônjuge 1</label>
+    <label for="nasc1">Data de nascimento — Esposo</label>
+    <input type="date" id="nasc1" name="nasc1" required>
+</div>
+            <div class="form-group">
+                <label for="num1">WhatsApp — Esposo</label>
                 <input type="tel" id="num1" name="num1" placeholder="(11) 99999-9999">
             </div>
             <div class="form-group">
-                <label for="nome2">Nome — Cônjuge 2</label>
+                <label for="nome2">Nome — Esposa</label>
                 <input type="text" id="nome2" name="nome2" placeholder="Digite seu nome" required>
             </div>
             <div class="form-group">
-                <label for="num2">WhatsApp — Cônjuge 2</label>
+    <label for="nasc1">Data de nascimento — Esposa</label>
+    <input type="date" id="nasc1" name="nasc1" required>
+</div>
+            <div class="form-group">
+                <label for="num2">WhatsApp — Esposa</label>
                 <input type="tel" id="num2" name="num2" placeholder="(11) 99999-9999">
             </div>
             <div class="form-group">
@@ -136,7 +219,7 @@
           <legend>Tamanho de camiseta</legend>
           <div class="camiseta-row">
                 <div class="form-group">
-                    <label for="camiseta1">Cônjuge 1</label>
+                    <label for="camiseta1">Esposo</label>
                       <select id="camiseta1" name="camiseta1">
                           <option value="">Selecione</option>
                           <option value="PP">PP</option>
@@ -148,7 +231,7 @@
                       </select>
                   </div>
                   <div class="form-group">
-                      <label for="camiseta2">Cônjuge 2</label>
+                      <label for="camiseta2">Esposa</label>
                         <select id="camiseta2" name="camiseta2">
                           <option value="">Selecione</option>
                           <option value="PP">PP</option>
@@ -169,19 +252,27 @@
       <div id="form-noivos" class="formulario oculto">
         <form action="#" method="post">
             <div class="form-group">
-                <label for="noivo1">Nome — Noivo(a) 1</label>
+                <label for="noivo1">Nome — Noivo </label>
                 <input type="text" id="noivo1" name="noivo1" placeholder="Digite seu nome" required>
             </div>
             <div class="form-group">
-                <label for="noivo-num1">WhatsApp — Noivo(a) 1</label>
+    <label for="nasc1">Data de nascimento — Noivo</label>
+    <input type="date" id="nasc1" name="nasc1" required>
+</div>
+            <div class="form-group">
+                <label for="noivo-num1">WhatsApp — Noivo</label>
                 <input type="tel" id="noivo-num1" name="noivo-num1" placeholder="(11) 99999-9999">
             </div>
             <div class="form-group">
-                <label for="noivo2">Nome — Noivo(a) 2</label>
+                <label for="noivo2">Nome — Noiva </label>
                 <input type="text" id="noivo2" name="noivo2" placeholder="Digite seu nome" required>
             </div>
             <div class="form-group">
-                <label for="noivo-num2">WhatsApp — Noivo(a) 2</label>
+    <label for="nasc1">Data de nascimento — Noiva</label>
+    <input type="date" id="nasc1" name="nasc1" required>
+</div>
+            <div class="form-group">
+                <label for="noivo-num2">WhatsApp — Noiva</label>
                 <input type="tel" id="noivo-num2" name="noivo-num2" placeholder="(11) 99999-9999">
             </div>
             <div class="form-group">
@@ -192,7 +283,7 @@
                 <legend>Tamanho de camiseta</legend>
                 <div class="camiseta-row">
                     <div class="form-group">
-                        <label for="camiseta-noivo1">Noivo(a) 1</label>
+                        <label for="camiseta-noivo1">Noivo</label>
                         <select id="camiseta-noivo1" name="camiseta-noivo1">
                             <option value="">Selecione</option>
                             <option value="PP">PP</option>
@@ -204,7 +295,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="camiseta-noivo2">Noivo(a) 2</label>
+                        <label for="camiseta-noivo2">Noiva</label>
                         <select id="camiseta-noivo2" name="camiseta-noivo2">
                             <option value="">Selecione</option>
                             <option value="PP">PP</option>
@@ -223,8 +314,18 @@
 </section>
         </main>
         <footer>
-            <p>&copy; 2025 Casais Fortes; Todos os direitos reservados.</p>
-        </footer>
+    <p class="footer-nome">Casais Fortes</p>
+
+    <div class="footer-info">
+        <p>ADVEC São Paulo — Rua dos Trilhos, 260, Mooca, São Paulo - SP</p>
+        <p>Ministério Famílias Vitoriosas</p>
+        <a href="https://instagram.com/familiaadvec_sp" target="_blank" rel="noopener" class="footer-instagram">@familiaadvec_sp</a>
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 Casais Fortes. Todos os direitos reservados.</p>
+    </div>
+</footer>
     
 </body>
 </html>

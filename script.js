@@ -25,3 +25,19 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 areas.forEach(area => observer.observe(area));
+
+const track = document.getElementById('depoimentos-track');
+const dots = document.querySelectorAll('#depoimentos-dots .dot');
+
+track.addEventListener('scroll', () => {
+    const paginaAtual = Math.round(track.scrollLeft / track.clientWidth);
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('ativo', i === paginaAtual);
+    });
+});
+
+function irParaNoivos() {
+    const botaoNoivos = document.querySelector('.btn-curso[onclick*="noivos"]');
+    mostrarFormulario('noivos', botaoNoivos);
+}
