@@ -1,6 +1,7 @@
 :root {
     /* Cores Principais (Identidade) */
     --fundo-escuro: #1a1a2e;    /* O azul-escuro predominante */
+    --fundo-escuro-claro:#302f52;
     --destaque-ouro: #C9A96E; 
     --ouro-claro: #e8c98a;  /* O dourado para botões, links ativos e títulos */
     --fundo-claro: #ffffff;     /* Branco para seções de contraste */
@@ -20,6 +21,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -59,6 +63,11 @@ nav.menu{
     font-weight: 600;
     color: var(--destaque-ouro);
     letter-spacing: 0.03rem;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+
 }
 /*---HEADER*/
 .menu-acoes{
@@ -160,6 +169,7 @@ nav.menu{
     padding: 48px 24px;
     background: var(--fundo-claro);
     text-align:center;
+    
 }
 .sobre h2{
     font-family: var(--fonte-titulo);
@@ -195,7 +205,7 @@ nav.menu{
     padding: 22px 20px;
     border: 1px solid var(--borda-suave);
     border-radius: 10px;
-    background: var(--fundo-alternativo);
+    background: var(--fundo-escuro-claro);
     text-align: left;
     transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -217,23 +227,25 @@ nav.menu{
     font-family: var(--fonte-titulo);
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--fundo-escuro);
+    color: var(--fundo-claro);
     margin-bottom: 8px;
 }
 .area p{
     font-size: 1rem;
     line-height: 1.55;
-    color: var(--texto-mutado);
+    color: rgba(255,255,255,0.75);
 }
 /*---PARA QUEM---*/
 .para-quem{
     padding: 48px 24px;
     background: var(--fundo-claro);
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg, transparent, var(--borda-suave) 20%, var(--borda-suave) 80%, transparent) 1;
 }
 .para-quem .section-eyebrow{
     display: block;
     font-size: 0.9rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
     color: var(--destaque-ouro);
     font-weight: 600;
@@ -241,7 +253,7 @@ nav.menu{
 }
 .para-quem h2{
     font-family: var(--fonte-titulo);
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--fundo-escuro);
     line-height: 1.15;
@@ -255,7 +267,7 @@ nav.menu{
 }
 
 .noivos-callout{
-    background: var(--fundo-escuro);
+    background: var(--fundo-escuro-claro);
     border-radius: 10px;
     padding: 18px;
 }
@@ -269,7 +281,7 @@ nav.menu{
 }
 .noivos-titulo{
     font-family: var(--fonte-titulo);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--texto-claro);
     margin-bottom: 8px;
@@ -296,19 +308,28 @@ nav.menu{
 
 /*---DEPOIMENTOS---*/
 .depoimentos{
-    padding: 48px 24px;
-    background: var(--fundo-escuro);
-    text-align: center;
+    padding: 40px 24px 28px;
+    background: var(--fundo-claro);
+    text-align: left;
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg, transparent, var(--borda-suave) 20%, var(--borda-suave) 80%, transparent) 1;
 }
 .depoimentos .section-eyebrow{
-    color: var(--ouro-claro);
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--destaque-ouro);
 }
 .depoimentos h2{
     font-family: var(--fonte-titulo);
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: var(--texto-claro);
-    margin-bottom: 28px;
+    color: var(--fundo-escuro);
+    line-height: 1.15;
+    margin-bottom: 14px;
 }
 
 .depoimentos-track{
@@ -333,7 +354,7 @@ nav.menu{
 }
 
 .depoimento-card{
-    background: rgba(255,255,255,0.04);
+    background: #302f52;
     border: 1px solid var(--borda-suave);
     border-radius: 10px;
     padding: 18px;
@@ -363,7 +384,7 @@ nav.menu{
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--borda-suave);
+    background: #e2e2e8;
     transition: background-color 0.25s ease, transform 0.25s ease;
 }
 .dot.ativo{
@@ -372,33 +393,35 @@ nav.menu{
 } 
 /*---INFORMAÇÕES---*/
 .informacoes{
-    padding: 48px 24px;
-    background: var(--fundo-escuro);
-    border-top: 1px solid transparent;
-    border-image: linear-gradient(90deg, transparent, var(--borda-suave) 20%, var(--borda-suave) 80%, transparent) 1;
+    padding: 28px 24px 48px;
+    background: var(--fundo-claro);
+    
 }
 .informacoes h2{
     font-family: var(--fonte-titulo);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    color: var(--texto-claro);
+    color: var(--fundo-escuro);
     margin-bottom: 18px;
 }
 
 .info-grid{
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--borda-suave);
-    border-radius: 10px;
-    overflow: hidden;
+    gap: 12px;
 }
 
 .info-item{
+    background: var(--fundo-escuro-claro);
+    border: 1px solid var(--borda-suave);
+    border-radius: 10px;
     padding: 18px;
-    border-bottom: 1px solid var(--borda-suave);
 }
-.info-item:last-child{
-    border-bottom: none;
+
+.info-icone{
+    display: block;
+    color: var(--destaque-ouro);
+    margin-bottom: 10px;
 }
 
 .info-titulo{
@@ -446,7 +469,10 @@ footer p{
 #inscricao{
     padding: 40px 20px 56px;
     background: var(--fundo-alternativo);
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg, transparent, var(--borda-suave) 20%, var(--borda-suave) 80%, transparent) 1;
 }
+
 #inscricao h2{
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
@@ -640,4 +666,16 @@ footer{
 .footer-copyright p{
     font-size: 0.7rem;
     color: rgba(255,255,255,0.4);
+}
+
+.msg-sucesso{
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(201, 169, 110, 0.12);
+    border: 1px solid var(--destaque-ouro);
+    border-radius: 6px;
+    color: var(--fundo-escuro);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
 }
