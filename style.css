@@ -657,10 +657,27 @@ fieldset legend{
 }
 @media (min-width: 600px){
     .hero{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         min-height: 560px;
+        padding: 40px 32px;
+    }
+    .hero-container{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        max-width: 1120px;
+        width: 100%;
+    }
+    .hero-imagem-wrap{
+        width: 40%;
+        max-width: 320px;
+        margin: 0;
+        flex-shrink: 0;
     }
     .hero-conteudo{
-        padding: 260px 32px 48px;
+        padding: 0;
     }
     .hero-texto{
         max-width: 42ch;
@@ -671,14 +688,12 @@ fieldset legend{
 @media (min-width: 1024px){
     .hero{
         min-height: 640px;
+        padding: 64px 24px;
+        max-width: none;   
+        margin: 0;             
     }
-    .hero-logo{
-        object-position: center 20%;
-    }
-    .hero-conteudo{
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 300px 24px 64px;
+    .hero-imagem-wrap{
+        max-width: 400px;
     }
     .hero-texto{
         max-width: 46ch;
