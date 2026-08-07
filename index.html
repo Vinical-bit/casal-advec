@@ -161,6 +161,8 @@
           </svg>
           <p class="info-titulo">Onde</p>
           <p class="info-texto">ADVEC São Paulo — Rua dos Trilhos, 260, Mooca, São Paulo - SP</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=ADVEC+São+Paulo+Rua+dos+Trilhos+260+Mooca+São+Paulo+SP"
+            target="_blank" rel="noopener" class="info-link">Ver no mapa</a>
         </div>
 
         <div class="info-item">
@@ -183,7 +185,11 @@
             <circle cx="15.5" cy="8.5" r="1.3" fill="currentColor" />
           </svg>
           <p class="info-titulo">Investimento</p>
-          <p class="info-texto">R$ 180 — Inclui material do curso (livro + camiseta do casal).</p>
+          <p class="info-texto">Inclui material do curso (Livro + Camiseta do casal).</p>
+          <div class="info-pills">
+            <span class="info-pill">Casais · R$ 180</span>
+            <span class="info-pill">Noivos · R$ 120</span>
+          </div>
         </div>
 
         <div class="info-item">
@@ -244,9 +250,9 @@
             <label for="turma">Turma de preferência</label>
             <select id="turma" name="turma" required>
               <option value="">Selecione um dia</option>
-              <option value="terca">Terça-feira</option>
-              <option value="quinta">Quinta-feira</option>
-              <option value="sabado">Sábado</option>
+              <option value="Terça-feira">Terça-feira</option>
+              <option value="Quinta-feira">Quinta-feira</option>
+              <option value="Sábado">Sábado</option>
             </select>
           </div>
           <fieldset>
@@ -278,8 +284,29 @@
               </div>
             </div>
           </fieldset>
+          <fieldset class="pagamento-fieldset">
+            <legend>Forma de pagamento</legend>
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="PIX" checked> Pix
+            </label>
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="Stand"> Pagar no stand da família
+            </label>
+          </fieldset>
           <button type="submit" class="btn-submit">Confirmar inscrição</button>
         </form>
+
+        <div class="tela-pix oculto">
+          <h3>Pagamento via Pix</h3>
+          <p class="pix-valor">Valor: R$ 180,00</p>
+          <img src="img/qrcode-pix.png" alt="QR Code Pix" class="pix-qrcode">
+          <div class="pix-copiaecola">
+            <input type="text" readonly id="pix-codigo-casais"
+              value="00020126580014BR.GOV.BCB.PIX013609dc414c-1cde-4002-9317-109f1b85ffb25204000053039865802BR5925Fernando Domingues Montei6009SAO PAULO62140510TxczudkGa76304FA1D">
+            <button type="button" class="btn-copiar" onclick="copiarPix('pix-codigo-casais')">Copiar código</button>
+          </div>
+          <button type="button" class="btn-submit btn-confirmar-pix">Confirmar inscrição</button>
+        </div>
       </div>
 
       <!--FORMULÁRIO NOIVO-->
@@ -318,7 +345,7 @@
             <div class="camiseta-row">
               <div class="form-group">
                 <label for="camiseta-noivo1">Noivo</label>
-                <select id="camiseta-noivo1" name="camiseta-noivo1">
+                <select id="camiseta-noivo1" name="camiseta1">
                   <option value="">Selecione</option>
                   <option value="PP">PP</option>
                   <option value="P">P</option>
@@ -330,7 +357,7 @@
               </div>
               <div class="form-group">
                 <label for="camiseta-noivo2">Noiva</label>
-                <select id="camiseta-noivo2" name="camiseta-noivo2">
+                <select id="camiseta-noivo2" name="camiseta2">
                   <option value="">Selecione</option>
                   <option value="PP">PP</option>
                   <option value="P">P</option>
@@ -342,14 +369,56 @@
               </div>
             </div>
           </fieldset>
+          <fieldset class="pagamento-fieldset">
+            <legend>Forma de pagamento</legend>
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="PIX" checked> Pix
+            </label>
+            <label class="pagamento-opcao">
+              <input type="radio" name="pagamento" value="Stand"> Pagar no stand da família
+            </label>
+          </fieldset>
           <button type="submit" class="btn-submit">Confirmar inscrição</button>
         </form>
+
+        <div class="tela-pix oculto">
+          <h3>Pagamento via Pix</h3>
+          <p class="pix-valor">Valor: R$ 120,00</p>
+          <img src="img/qrcode-pix.png" alt="QR Code Pix" class="pix-qrcode">
+          <div class="pix-copiaecola">
+            <input type="text" readonly id="pix-codigo-noivos"
+              value="00020126580014BR.GOV.BCB.PIX013609dc414c-1cde-4002-9317-109f1b85ffb25204000053039865802BR5925Fernando Domingues Montei6009SAO PAULO62140510TxczudkGa76304FA1D">
+            <button type="button" class="btn-copiar" onclick="copiarPix('pix-codigo-noivos')">Copiar código</button>
+          </div>
+          <button type="button" class="btn-submit btn-confirmar-pix">Confirmar inscrição</button>
+        </div>
       </div>
     </section>
+
+
+    <!-- CONFIRMAÇÃO DE INSCRIÇÃO -->
+    <div id="confirmacao" class="confirmacao oculto">
+      <div class="confirmacao-icone">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 13l4 4L19 7" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="confirmacao-titulo">Inscrição recebida!</h3>
+      <p class="confirmacao-texto">Em breve entramos em contato pelo WhatsApp com os detalhes do pagamento e do primeiro
+        encontro.</p>
+      <a href="https://wa.me/5511991132349" target="_blank" rel="noopener" class="confirmacao-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.4 3.8 3.4.5.2.9.4 1.2.5.5.2 1 .1 1.3-.1.4-.2 1.2-.5 1.4-1 .2-.5.2-.9.1-1Z" />
+        </svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+    </section>
   </main>
+
   <footer>
     <p class="footer-nome">Casais Fortes</p>
-
     <div class="footer-info">
       <p>ADVEC São Paulo — Rua dos Trilhos, 260, Mooca, São Paulo - SP</p>
       <p>Ministério Famílias Vitoriosas</p>

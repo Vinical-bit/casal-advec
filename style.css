@@ -205,7 +205,7 @@ nav.menu{
     padding: 22px 20px;
     border: 1px solid var(--borda-suave);
     border-radius: 10px;
-    background: var(--fundo-escuro-claro);
+    background: var(--fundo-claro);
     text-align: left;
     transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -227,13 +227,13 @@ nav.menu{
     font-family: var(--fonte-titulo);
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--fundo-claro);
+    color: var(--texto-escuro);
     margin-bottom: 8px;
 }
 .area p{
     font-size: 1rem;
     line-height: 1.55;
-    color: rgba(255,255,255,0.75);
+    color: var(--texto-mutado)
 }
 /*---PARA QUEM---*/
 .para-quem{
@@ -451,6 +451,62 @@ nav.menu{
     padding: 5px 10px;
     border-radius: 5px;
 }
+.info-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: var(--destaque-ouro) ;
+    text-decoration: underline;
+}
+
+.confirmacao{
+    background: var(--fundo-escuro);
+    border-radius: 10px;
+    padding: 40px 24px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.confirmacao-icone{
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--destaque-ouro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirmacao-titulo{
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--texto-claro);
+    margin-bottom: 12px;
+}
+.confirmacao-texto{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+    max-width: 32ch;
+    margin: 0 auto 24px;
+}
+.confirmacao-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--destaque-ouro);
+    color: var(--fundo-escuro);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.confirmacao-btn:hover{
+    background: var(--ouro-claro);
+    transform: scale(1.05);
+}
 
 
 /*---FOOTER---*/
@@ -488,9 +544,11 @@ footer p{
 
 /*TABS DE CURSO*/
 #escolha-curso{
-    display: flex;
     gap: 8px;
     margin-bottom: 24px;
+}
+#escolha-curso:not(.oculto){
+    display: flex;
 }
 .btn-curso{
     flex: 1;
@@ -678,4 +736,47 @@ footer{
     font-size: 0.85rem;
     font-weight: 500;
     text-align: center;
+}
+
+.tela-pix {
+    text-align: center;
+    padding: 20px;
+}
+
+.pix-qrcode {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 12px auto;
+    border-radius: 8px;
+}
+
+.pix-valor {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.pix-copiaecola {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.pix-copiaecola input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-copiar {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
 }
